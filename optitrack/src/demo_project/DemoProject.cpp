@@ -73,7 +73,7 @@ void DemoProject::initialize() {
 
 	// Demo usage for OptiTrackClient
 	ofstream outputFile;
-	outputFile.open("../resources/optitrackdata.csv");
+	outputFile.open("../../data/newoptitrackdata.csv");
 	Eigen::VectorXd sensor_force = Eigen::VectorXd::Zero(6);
 	Eigen::VectorXd sensor_force2 = Eigen::VectorXd::Zero(6);
 	std::this_thread::sleep_for(std::chrono::milliseconds(100));
