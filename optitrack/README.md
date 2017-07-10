@@ -1,5 +1,5 @@
-# cs225a
-Repository for class resources: CS225a experimental robotics
+# Human Force Code
+Repository for recording human motion data along with force data
 
 ## Automatic Installation Instructions (for Ubuntu and Mac only)
 1. If you have a Mac, install Brew (https://brew.sh/). If you have Ubuntu, install git (sudo apt install git)
