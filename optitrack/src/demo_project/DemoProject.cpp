@@ -16,37 +16,6 @@ static inline bool isnan(const Eigen::MatrixBase<Derived>& x) {
 using namespace std;
 
 /**
- * DemoProject::readRedisValues()
- * ------------------------------
- * Retrieve all read keys from Redis.
- */
-void DemoProject::readRedisValues() {
-	// read from Redis current sensor values
-	// redis_client_.getEigenMatrixDerivedString(JOINT_ANGLES_KEY, robot->_q);
-	// redis_client_.getEigenMatrixDerivedString(JOINT_VELOCITIES_KEY, robot->_dq);
-
-	// Get current simulation timestamp from Redis
-	redis_client_.getCommandIs(TIMESTAMP_KEY, redis_buf_);
-	t_curr_ = stod(redis_buf_);
-
-}
-
-/**
- * DemoProject::writeRedisValues()
- * -------------------------------
- * Send all write keys to Redis.
- */
-void DemoProject::writeRedisValues() {
-	// Send end effector position and desired position
-	redis_client_.setEigenMatrixDerivedString(EE_POSITION_KEY, x_);
-	redis_client_.setEigenMatrixDerivedString(EE_POSITION_DESIRED_KEY, x_des_);
-
-	// Send torques
-	redis_client_.setEigenMatrixDerivedString(JOINT_TORQUES_COMMANDED_KEY, command_torques_);
-}
-
-
-/**
  * public DemoProject::initialize()
  * --------------------------------
  * Initialize timer and Redis client
@@ -67,9 +36,6 @@ void DemoProject::initialize() {
 	// optitrack_->openConnection("10.34.171.10");
 	optitrack_->openConnection("10.34.161.81");
 	
-	// if(!optitrack_->openCsv("../resources/optitrackdata.csv") ) {
-	// 	cout << "Failed to open the file" << endl;
-	// }
 
 	// Demo usage for OptiTrackClient
 	ofstream outputFile;
@@ -91,18 +57,15 @@ void DemoProject::initialize() {
 	while (g_runloop) {
 		std::this_thread::sleep_for(std::chrono::milliseconds(20));
 		if (!optitrack_->getFrame()) {
-			// cout << "Its not really working" << endl;
 			continue;
 		}
 		redis_client_.getEigenMatrixDerived("sai2::optoforceSensor::6Dsensor::force", sensor_force);
 		redis_client_.getEigenMatrixDerived("sai2::optoforceSensor2::6Dsensor::force", sensor_force2);
 
-		// cout << "Timestamp: " << optitrack_->frameTime() << endl;
-		// cout << "Rigid body positions:" << endl;
 		outputFile << optitrack_->frameTime() << ", ";
 
-		// double fx, fy;
-
+		// This is used because the round force sensor is offset, this rotates it so x and y 
+		// lines up with the square sensor
 		Eigen::Matrix3d rotation;
 
 		rotation << 1.0/sqrt(2.0), 1.0/sqrt(2.0), 0,
@@ -123,24 +86,9 @@ void DemoProject::initialize() {
 		for (int i = 0; i < optitrack_->pos_rigid_bodies_.size(); i++) {
 			auto& pos = optitrack_->pos_rigid_bodies_[i];
 			auto& ori = optitrack_->ori_rigid_bodies_[i];
-			// cout << '\t' << pos.transpose() << endl;
-			// cout << '\t' << pos(0) << "," << pos(1) << ","<< pos(2) << "," << ori.w() << "," << ori.x() << "," << ori.y() << "," <<ori.z() << endl;
-
-			// outputFile << '\t' << pos.transpose() << endl;
 			outputFile << pos(0) << "," << pos(1) << ","<< pos(2) << "," << ori.w() << "," << ori.x() << "," << ori.y() << "," <<ori.z() << ",";
 		}
 		outputFile << endl;
-		// cout << "Force Sensor Output:" << endl;
-		// cout << sensor_force.transpose() << endl;
-		// cout << sensor_force2.transpose() << endl;
-		// cout << "Marker positions:" << endl;
-		// outputFile << "Marker positions:" << endl;
-		// for (auto& pos : optitrack_->pos_single_markers_) {
-		// 	cout << '\t' << pos.transpose() << endl;
-		// 	outputFile << '\t' << pos.transpose() << endl;
-		// }
-		// cout << endl;
-		// outputFile << endl;
 	}
 	optitrack_->closeConnection();
 	outputFile.close();
