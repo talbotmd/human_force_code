@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11 -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/jsoncpp -I/home/talbotmd/Documents/optoforce/optoforceSensor2/redis -I/home/talbotmd/Documents/optoforce/optoforceSensor2/filters -I/home/talbotmd/Documents/optoforce/optoforceSensor2/LINUX_API_V1.5.1/include -I/usr/include/eigen3 -I/home/talbotmd/Documents/optoforce/optoforceSensor2/jsoncpp 
+CXX_INCLUDES = -I/usr/include/jsoncpp -I/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor2/redis -I/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor2/filters -I/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor2/LINUX_API_V1.5.1/include -I/usr/include/eigen3 -I/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor2/jsoncpp 
 

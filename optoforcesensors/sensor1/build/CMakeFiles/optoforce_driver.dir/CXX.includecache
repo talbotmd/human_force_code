@@ -52,7 +52,7 @@ stdlib.h
 stdint.h
 -
 
-/home/talbotmd/Documents/optoforce/optoforceSensor/filters/ButterworthFilter.h
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/filters/ButterworthFilter.h
 math.h
 -
 stdexcept
@@ -62,7 +62,7 @@ iostream
 Eigen/Dense
 -
 
-/home/talbotmd/Documents/optoforce/optoforceSensor/optoforce6DRedisDriver.cpp
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/optoforce6DRedisDriver.cpp
 iostream
 -
 fstream
@@ -76,17 +76,17 @@ stdio.h
 unistd.h
 -
 omd/opto.h
-/home/talbotmd/Documents/optoforce/optoforceSensor/omd/opto.h
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/omd/opto.h
 omd/sensorconfig.h
-/home/talbotmd/Documents/optoforce/optoforceSensor/omd/sensorconfig.h
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/omd/sensorconfig.h
 omd/optopackage.h
-/home/talbotmd/Documents/optoforce/optoforceSensor/omd/optopackage.h
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/omd/optopackage.h
 filters/ButterworthFilter.h
-/home/talbotmd/Documents/optoforce/optoforceSensor/filters/ButterworthFilter.h
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/filters/ButterworthFilter.h
 redis/RedisClient.h
-/home/talbotmd/Documents/optoforce/optoforceSensor/redis/RedisClient.h
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/redis/RedisClient.h
 
-/home/talbotmd/Documents/optoforce/optoforceSensor/redis/RedisClient.h
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/redis/RedisClient.h
 Eigen/Core
 -
 hiredis/hiredis.h

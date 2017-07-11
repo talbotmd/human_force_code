@@ -1,3 +1,3 @@
-/home/talbotmd/Documents/optoforce/optoforceSensor/build/CMakeFiles/rebuild_cache.dir
-/home/talbotmd/Documents/optoforce/optoforceSensor/build/CMakeFiles/edit_cache.dir
-/home/talbotmd/Documents/optoforce/optoforceSensor/build/CMakeFiles/optoforce_driver.dir
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/build/CMakeFiles/rebuild_cache.dir
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/build/CMakeFiles/edit_cache.dir
+/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/build/CMakeFiles/optoforce_driver.dir

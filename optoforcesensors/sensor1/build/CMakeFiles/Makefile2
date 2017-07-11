@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/talbotmd/Documents/optoforce/optoforceSensor
+CMAKE_SOURCE_DIR = /home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/talbotmd/Documents/optoforce/optoforceSensor/build
+CMAKE_BINARY_DIR = /home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/optoforce_driver.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/talbotmd/Documents/optoforce/optoforceSensor/build
 CMakeFiles/optoforce_driver.dir/all:
 	$(MAKE) -f CMakeFiles/optoforce_driver.dir/build.make CMakeFiles/optoforce_driver.dir/depend
 	$(MAKE) -f CMakeFiles/optoforce_driver.dir/build.make CMakeFiles/optoforce_driver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/talbotmd/Documents/optoforce/optoforceSensor/build/CMakeFiles --progress-num=1,2 "Built target optoforce_driver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/build/CMakeFiles --progress-num=1,2 "Built target optoforce_driver"
 .PHONY : CMakeFiles/optoforce_driver.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/optoforce_driver.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/optoforce_driver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/talbotmd/Documents/optoforce/optoforceSensor/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/optoforce_driver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/talbotmd/Documents/optoforce/optoforceSensor/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor1/build/CMakeFiles 0
 .PHONY : CMakeFiles/optoforce_driver.dir/rule
 
 # Convenience name for target.

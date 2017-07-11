@@ -1,4 +1,4 @@
-# Install script for directory: /home/talbotmd/Documents/optoforce/optoforceSensor2
+# Install script for directory: /home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/talbotmd/Documents/optoforce/optoforceSensor2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/talbotmd/Documents/human_force_code/human_force_code/optoforcesensors/sensor2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
