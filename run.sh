@@ -1,9 +1,19 @@
 cd optoforcesensors/sensor2/build/
-x-terminal-emulator -e "bash -c 'echo \"Plug in second force sensor before running this\" && sudo ./optoforce_driver'"
+x-terminal-emulator -e "bash -c 'echo \"Plug in second force sensor before running this\";
+while true; do
+	sudo ./optoforce_driver
+done
+'"
 cd ../../..
 
 cd optoforcesensors/sensor1/build/
-x-terminal-emulator -e "bash -c 'echo \"Run this one first\" && sudo ./optoforce_driver'"
+# x-terminal-emulator -e "bash -c 'echo \"Run this one first\" && sudo ./optoforce_driver'"
+# cd ../../..
+x-terminal-emulator -e "bash -c 'echo \"Run this one first, with the round force sensor\";
+while true; do
+	sudo ./optoforce_driver
+done
+'"
 cd ../../..
 
 read -p "Once both sensors are running, press any key to continue..." yn
